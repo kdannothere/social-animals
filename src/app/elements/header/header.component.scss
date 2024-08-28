@@ -1,6 +1,8 @@
 @use "../../../scss/functions/px-to-rem";
 @use "../../../scss/lib/typography/fonts";
 
+
+
 .logo {
 
   padding-left: px-to-rem.px-to-rem(61);
@@ -14,12 +16,14 @@
 }
 
 .nav {
-  padding-left: px-to-rem.px-to-rem(258);
+  padding-left: px-to-rem.px-to-rem(114);
   padding-top: px-to-rem.px-to-rem(25);
+  width: 60%;
 
   &__items {
-    display: grid;
-    grid-template: auto / repeat(4, .5fr);
+    display: flex;
+    justify-content: space-between;
+
   }
 
   &__item {
@@ -28,8 +32,19 @@
   }
 }
 
-.grid__wrapper {
-  display: grid;
-  grid-template: auto / repeat(2, auto);
-  align-items: stretch;
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: px-to-rem.px-to-rem(1440);
+}
+
+
+.lang {
+  padding-left: px-to-rem.px-to-rem(179);
+  padding-top: px-to-rem.px-to-rem(25);
+  padding-right: px-to-rem.px-to-rem(105);
+  font-size: px-to-rem.px-to-rem(20);
+    font-family: fonts.$font-releway-regular;
+    line-height: px-to-rem.px-to-rem(23.48);
 }
