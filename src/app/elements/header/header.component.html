@@ -1,26 +1,19 @@
-<header>
-  
-    <div class="header__wrapper container">
-      <div class="logo">
-        <img [src]="logoUrl" [alt]="logoAlt" class="logo__img">
-      </div>
-      <nav class="nav">
-        <ul class="nav__items">
-          <li class="nav__item">
-            <a href="" class="nav__link">Про нас</a>
-          </li>
-          <li class="nav__item">
-            <a href="" class="nav__link">Діяльність</a>
-          </li>
-          <li class="nav__item">
-            <a href="" class="nav__link">Підтримати</a>
-          </li>
-          <li class="nav__item">
-            <a href="" class="nav__link">Форум</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="lang">EN/UA</div>
-    </div>
-
+<header class="header__container">
+  <div class="logo">
+    <img [src]="logoUrl" [alt]="logoAlt" class="logo__img">
+  </div>
+  <nav class="nav">
+    <ul class="nav__items">
+      @for (elem of navData; track $index) {
+      <li class="nav__item" (click)="openClose($index)">
+        <p>{{ elem.value  }}</p>
+        <drop-arrows-icon [isOpened]="elem.isOpened"></drop-arrows-icon>
+      </li>
+      }
+      <li class="nav__item" >
+        <a href="/">Форум</a>
+      </li>
+    </ul>
+  </nav>
+  <p class="lang">EN/UA</p>
 </header>

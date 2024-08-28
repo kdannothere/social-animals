@@ -1,0 +1,45 @@
+@use "../functions/px-to-rem";
+@use "../lib/typography/fonts";
+
+.header__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.logo {
+  &__img {
+    width: px-to-rem.px-to-rem(148);
+    height: px-to-rem.px-to-rem(83);
+    margin-right: px-to-rem.px-to-rem(114);
+  }
+}
+
+.nav{
+  min-width: px-to-rem.px-to-rem(748);
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  &__item {
+    display: flex;
+    font-family: fonts.$font-releway-regular;
+    font-size: px-to-rem.px-to-rem(24);
+  }
+}
+
+drop-arrows-icon {
+  padding-left: px-to-rem.px-to-rem(18);
+}
+
+.lang {
+  padding-left: px-to-rem.px-to-rem(179);
+  padding-right: px-to-rem.px-to-rem(105);
+  font-family: fonts.$font-releway-regular;
+  font-size: px-to-rem.px-to-rem(20)
+}
