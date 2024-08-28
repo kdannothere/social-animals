@@ -1,0 +1,35 @@
+@use "../../../scss/functions/px-to-rem";
+@use "../../../scss/lib/typography/fonts";
+
+.logo {
+
+  padding-left: px-to-rem.px-to-rem(61);
+  padding-top: px-to-rem.px-to-rem(25);
+
+
+  &__img {
+    width: px-to-rem.px-to-rem(148);
+    height: px-to-rem.px-to-rem(83);
+  }
+}
+
+.nav {
+  padding-left: px-to-rem.px-to-rem(258);
+  padding-top: px-to-rem.px-to-rem(25);
+
+  &__items {
+    display: grid;
+    grid-template: auto / repeat(4, .5fr);
+  }
+
+  &__item {
+    font-size: px-to-rem.px-to-rem(24);
+    font-family: fonts.$font-releway-regular;
+  }
+}
+
+.grid__wrapper {
+  display: grid;
+  grid-template: auto / repeat(2, auto);
+  align-items: stretch;
+}
