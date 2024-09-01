@@ -1,0 +1,106 @@
+@use "../functions/px-to-rem";
+@use "../lib/typography/fonts";
+@use "../colors.scss";
+@use "../mixins/flex";
+
+.header__container {
+  @include flex.space-between();
+  align-items: center;
+}
+
+.logo {
+  padding-bottom: px-to-rem.px-to-rem(25);
+
+  &__img {
+    width: px-to-rem.px-to-rem(148);
+    height: px-to-rem.px-to-rem(83);
+    margin-right: px-to-rem.px-to-rem(114);
+  }
+}
+
+.nav {
+  padding: px-to-rem.px-to-rem(10);
+
+  &__items {
+    @include flex.space-between();
+  }
+
+  &__item {
+    display: flex;
+    font-family: fonts.$font-raleway-regular;
+    font-size: px-to-rem.px-to-rem(24);
+    color: colors.$color-main-black;
+    letter-spacing: -0.04em;
+    cursor: pointer;
+    position: relative;
+    border-bottom: 2px solid transparent;
+    padding-right: px-to-rem.px-to-rem(35);
+  }
+}
+
+.nav__item:hover,
+.drop-down-menu__item:hover {
+  // border-bottom: 2px solid colors.$color-active;
+  text-decoration: 2px solid underline colors.$color-active;
+  padding-bottom: 0.1rem;
+  // transition: 500ms ease-in-out;
+}
+
+.drop-down-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  transition: 500ms ease-in-out;
+  animation: drop-down 700ms ease-in-out;
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    padding-top: px-to-rem.px-to-rem(31);
+  }
+
+  &__item {
+    width: px-to-rem.px-to-rem(288);
+    padding-top: px-to-rem.px-to-rem(31);
+    border-bottom: 2px solid transparent;
+    font-family: fonts.$font-raleway-regular;
+    font-size: px-to-rem.px-to-rem(24);
+    color: colors.$color-main-black;
+    letter-spacing: -0.04em;
+  }
+}
+
+@keyframes drop-down {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+drop-arrows-icon {
+  padding-left: px-to-rem.px-to-rem(18);
+}
+
+.lang {
+  padding-left: px-to-rem.px-to-rem(144);
+  padding-right: px-to-rem.px-to-rem(45);
+
+  &__en,
+  &__ua {
+    font-family: fonts.$font-raleway-regular;
+    font-size: px-to-rem.px-to-rem(20);
+    color: colors.$color-main-black;
+    letter-spacing: -0.04em;
+    cursor: pointer;
+  }
+
+  &__ua__active {
+    color: colors.$color-active;
+  }
+
+  &__en__active {
+    color: colors.$color-active;
+  }
+}
