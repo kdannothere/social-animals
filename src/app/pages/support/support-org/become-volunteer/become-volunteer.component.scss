@@ -1,24 +1,11 @@
 @import "colors";
 
-$color-orange-light: rgba(250, 167, 108, 1);
-$color-blue-light: rgba(196, 216, 220, 0.71);
-$color-blue-light-1: rgba(122, 156, 210, 0.34);
-$color-blue-light-2: rgba(233, 232, 232, 0.82);
-$color-blue-dark-1: rgba(22, 39, 164, 1);
-$color-blue-dark-2: rgba(28, 35, 84, 1);
-$color-violet: rgba(151, 71, 255, 1);
-$color-black-1: rgba(30, 30, 30, 1);
-$color-black-2: rgba(26, 26, 27, 1);
-$color-black-3: rgba(25, 25, 25, 1);
-$color-black-4: rgba(0, 0, 0, 0.88);
-$color-white-1: rgba(248, 248, 232, 1);
-
 .wrapper {
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  background-color: $color-white-1;
+  background-color: $color-bg;
   font-family: "Rubik";
   & p {
     cursor: default;
@@ -28,7 +15,7 @@ $color-white-1: rgba(248, 248, 232, 1);
   width: 1284px;
   height: 470px;
   display: flex;
-  background-color: $color-blue-light;
+  background-color: rgba(196, 216, 220, 0.71);
   border-radius: 21px;
   margin-top: 51px;
 
@@ -44,7 +31,7 @@ $color-white-1: rgba(248, 248, 232, 1);
     font-size: 36px;
     font-weight: 500;
     line-height: 42.26px;
-    color: $color-black-1;
+    color: rgba(30, 30, 30, 1);
     margin-left: 30px;
     margin-top: 68px;
     font-family: "Raleway";
@@ -55,7 +42,7 @@ $color-white-1: rgba(248, 248, 232, 1);
     font-size: 24px;
     font-weight: 300;
     line-height: 33.6px;
-    color: $color-black-2;
+    color: rgba(26, 26, 27, 1);
     margin-left: 30px;
   }
 
@@ -65,7 +52,7 @@ $color-white-1: rgba(248, 248, 232, 1);
     width: 354px;
     height: 68px;
     padding: 15px 20px 15px 20px;
-    background-color: $color-blue-dark-2;
+    background-color: rgba(28, 35, 84, 1);
     color: $color-white;
     font-size: 32px;
     font-weight: 400;
@@ -74,7 +61,7 @@ $color-white-1: rgba(248, 248, 232, 1);
     text-wrap: nowrap;
     border-radius: 15px;
     margin-top: 32px;
-    box-shadow: inset 6px 8px 10.5px -3.5px $color-blue-dark-1;
+    box-shadow: inset 6px 8px 10.5px -3.5px rgba(22, 39, 164, 1);;
   }
 
   &__image-container {
@@ -105,7 +92,8 @@ $color-white-1: rgba(248, 248, 232, 1);
     line-height: 46.96px;
     text-align: center;
     margin-bottom: 52px;
-    font-family: $color-blue-dark-2;
+    font-family: "Raleway";
+    color: rgba(28, 35, 84, 1);
   }
 
   &__method {
@@ -139,7 +127,7 @@ $color-white-1: rgba(248, 248, 232, 1);
 
   &__description {
     width: 497px;
-    color: $color-black-4;
+    color: rgba(0, 0, 0, 0.88);
     font-size: 20px;
     font-weight: 400;
     line-height: 28px;
@@ -151,7 +139,8 @@ $color-white-1: rgba(248, 248, 232, 1);
     font-weight: 500;
     line-height: 42.26px;
     text-align: center;
-    font-family: $color-blue-dark-2;
+    font-family: "Raleway";
+    color: rgba(28, 35, 84, 1);
     margin-top: 32px;
     margin-bottom: 16px;
   }
@@ -189,7 +178,8 @@ $color-white-1: rgba(248, 248, 232, 1);
     margin-top: 24px;
     margin-bottom: 49px;
     margin-left: 67px;
-    font-family: $color-blue-dark-2;
+    font-family: "Raleway";
+    color: rgba(28, 35, 84, 1);
   }
 
   &__reasons {
@@ -209,27 +199,27 @@ $color-white-1: rgba(248, 248, 232, 1);
     text-wrap: nowrap;
     &:nth-child(1) {
       grid-column: 1/5;
-      border-left: 4px solid $color-blue-light-1;
-      border-bottom: 4px solid $color-blue-light-1;
+      border-left: 4px solid rgba(122, 156, 210, 0.34);
+      border-bottom: 4px solid rgba(122, 156, 210, 0.34);
     }
     &:nth-child(2) {
       grid-column: 2/5;
-      box-shadow: 8px 0px 0px 4px $color-white-1;
-      border-left: 4px solid $color-blue-light-1;
-      border-bottom: 4px solid $color-blue-light-1;
+      box-shadow: 8px 0px 0px 4px $color-bg;
+      border-left: 4px solid rgba(122, 156, 210, 0.34);
+      border-bottom: 4px solid rgba(122, 156, 210, 0.34);
       border-radius: 0px;
     }
     &:nth-child(3) {
       grid-column: 3/5;
-      box-shadow: 8px 0px 0px 4px $color-white-1;
-      border-left: 4px solid $color-blue-light-1;
-      border-bottom: 4px solid $color-blue-light-1;
+      box-shadow: 8px 0px 0px 4px $color-bg;
+      border-left: 4px solid rgba(122, 156, 210, 0.34);
+      border-bottom: 4px solid rgba(122, 156, 210, 0.34);
     }
     &:nth-child(4) {
       grid-column: 4/5;
-      box-shadow: 8px 0px 0px 4px $color-white-1;
-      border-left: 4px solid $color-blue-light-1;
-      border-bottom: 4px solid $color-blue-light-1;
+      box-shadow: 8px 0px 0px 4px $color-bg;
+      border-left: 4px solid rgba(122, 156, 210, 0.34);
+      border-bottom: 4px solid rgba(122, 156, 210, 0.34);
     }
   }
 
@@ -239,7 +229,7 @@ $color-white-1: rgba(248, 248, 232, 1);
     line-height: 28.44px;
     text-align: center;
     color: $color-black;
-    border: 2px dashed $color-violet;
+    border: 2px dashed rgba(151, 71, 255, 1);
     border-radius: 16px;
     padding: 15px;
   }
@@ -311,7 +301,7 @@ $color-white-1: rgba(248, 248, 232, 1);
   position: relative;
   display: flex;
   justify-content: center;
-  background-color: $color-blue-light-2;
+  background-color: rgba(233, 232, 232, 0.82);
   margin-bottom: 87px;
 
   &__wrapper {
@@ -359,8 +349,8 @@ $color-white-1: rgba(248, 248, 232, 1);
     width: 218px;
     height: 78px;
     padding: 20px;
-    background-color: $color-orange-light;
-    color: $color-black-3;
+    background-color: rgba(250, 167, 108, 1);
+    color: rgba(25, 25, 25, 1);
     font-size: 32px;
     font-weight: 300;
     line-height: 37.92px;
