@@ -1,0 +1,17 @@
+@use "../functions/px-to-rem";
+@use "../colors";
+@use "../lib/typography/fonts";
+
+.btn {
+  padding: px-to-rem.px-to-rem(10);
+  border-radius: 15px;
+
+  &__subscription {
+    font-family: fonts.$font-rubik-regular;
+    font-size: px-to-rem.px-to-rem(16);
+    line-height: 140%;
+    letter-spacing: .07em;
+    color: colors.$color-white;
+    background-color: colors.$color-arrows;
+  }
+}

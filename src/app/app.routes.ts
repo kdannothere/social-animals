@@ -1,17 +1,15 @@
 import { Routes } from '@angular/router';
-import { RegistrationComponent } from './pages/registration/registration.component';
-import { HomeComponent } from './pages/home/home.component';
-import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
-import { DonationDetailsComponent } from './pages/support/support-org/donation-details/donation-details.component';
-import { CurrentDonationsComponent } from './pages/support/support-org/current-donations/current-donations.component';
-import { BecomeVolunteerComponent } from './pages/support/support-org/become-volunteer/become-volunteer.component';
+import { LayoutComponent } from './shared/components/layout/layout.component';
 
 export const routes: Routes = [
-	{ path: 'h', component: HomeComponent },
-	{ path: '', component: BecomeVolunteerComponent },
-	// { path: 'become-volunteer', component: BecomeVolunteerComponent },
-	{ path: 'donation-details', component: DonationDetailsComponent },
-	{ path: 'current-donations', component: CurrentDonationsComponent },
-  { path: 'registration', component: RegistrationComponent },
-  { path: '**', component: PageNotFoundComponent },
+	{path: '', component: LayoutComponent,
+    children: [
+      {path: '', loadComponent: () => import('./pages/home/home.component').then(c => c.HomeComponent)},
+      {path: 'become-volunteer', loadComponent: () => import('./pages/support/support-org/become-volunteer/become-volunteer.component').then(c => c.BecomeVolunteerComponent)},
+      {path: 'current-donations', loadComponent: () => import('./pages/support/support-org/current-donations/current-donations.component').then(c => c.CurrentDonationsComponent)},
+      {path: 'donation-details', loadComponent: () => import('./pages/support/support-org/donation-details/donation-details.component').then(c => c.DonationDetailsComponent)},
+    ]
+  },
+  { path: 'registration', loadComponent: () => import('./pages/registration/registration.component').then(c => c.RegistrationComponent) },
+  { path: '**', loadComponent: () => import('./pages/page-not-found/page-not-found.component').then(c => c.PageNotFoundComponent) },
 ];

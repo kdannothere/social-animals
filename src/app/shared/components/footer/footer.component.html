@@ -1,0 +1,65 @@
+<footer class="footer">
+  <div class="footer__wrapper">
+    <div class="logo logo__footer">
+      <img [src]="logoUrl" [alt]="logoAlt" class="logo__img" />
+      <p class="logo__text">
+        "Дай шанс на нове життя – врятуй чотирилапого героя!"
+      </p>
+    </div>
+    <div class="footer__nav">
+      <div class="footer__nav__left">
+        <p class="nav__link"><a href="#">Про нас</a></p>
+        <p class="nav__link"><a href="#">Контакти</a></p>
+        <p class="nav__link"><a href="#">Новини</a></p>
+      </div>
+      <div class="footer__nav__right">
+        <p class="nav__link"><a href="#">Діяльність</a></p>
+        <p class="nav__link"><a href="#">Підтримати</a></p>
+        <p class="nav__link"><a href="#">Форум</a></p>
+      </div>
+    </div>
+    <div class="subscription subscription__footer">
+      <p class="subscription__text">Отримуй більше новин підписавшись</p>
+      <form class="subscription__form">
+        <label class="label" #active for="email">Email</label>
+        <input
+          appInput
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="email"
+          class="subscription__input input"
+        />
+        <button
+          class="btn btn__subscription"
+          type="submit"
+          (click)="onSubmit()"
+        >
+          Підписатись
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="social">
+    <img
+      class="social__icon"
+      src="../../../../scss/lib/pics/social/ic_baseline-facebook.png"
+      alt="facebook icon"
+    />
+    <img
+      class="social__icon"
+      src="../../../../scss/lib/pics/social/iconoir_instagram.png"
+      alt="instagram icon"
+    />
+    <img
+      class="social__icon"
+      src="../../../../scss/lib/pics/social/prime_twitter.png"
+      alt="twitter icon"
+    />
+    <img
+      class="social__icon"
+      src="../../../../scss/lib/pics/social/mdi_linkedin.png"
+      alt="linkedin icon"
+    />
+  </div>
+</footer>
