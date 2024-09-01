@@ -1,27 +1,27 @@
 <header class="header__container">
   <div class="logo">
-    <img [src]="logoUrl" [alt]="logoAlt" class="logo__img">
+    <img [src]="logoUrl" [alt]="logoAlt" class="logo__img" />
   </div>
   <nav class="nav">
     <ul class="nav__items">
       @for (elem of navData; track $index) {
       <li class="nav__item" (click)="openClose($index)">
-        <p>{{ elem.value  }}</p>
+        <p>{{ elem.value }}</p>
         <drop-arrows-icon [isOpened]="elem.isOpened"></drop-arrows-icon>
         @if (elem.isOpened) {
-          <div class="drop-down-menu">
-           <ul class="drop-down-menu__items">
+        <div class="drop-down-menu">
+          <ul class="drop-down-menu__items">
             @for (item of elem.subMenu; track $index) {
-            <li class="drop-down-menu__item" >
-              {{item}}
+            <li class="drop-down-menu__item">
+              <a [href]="getLink(item, elem.links)">{{ item }}</a>
             </li>
-          }
-           </ul>
-          </div>
+            }
+          </ul>
+        </div>
         }
       </li>
       }
-      <li class="nav__item" >
+      <li class="nav__item">
         <a href="#">Форум</a>
       </li>
     </ul>
@@ -29,18 +29,18 @@
   <p class="lang">
     <span
       class="lang__en"
-      [ngClass]="{'lang__en__active': isEnActive}"
+      [ngClass]="{ lang__en__active: isEnActive }"
       (click)="currentLang('en')"
-      >
-        EN
-      </span>
-      /
-      <span
-        class="lang__ua"
-        [ngClass]="{'lang__ua__active': isUaActive}"
-        (click)="currentLang('ua')"
-        >
-          UA
-        </span>
-      </p>
+    >
+      EN
+    </span>
+    /
+    <span
+      class="lang__ua"
+      [ngClass]="{ lang__ua__active: isUaActive }"
+      (click)="currentLang('ua')"
+    >
+      UA
+    </span>
+  </p>
 </header>
