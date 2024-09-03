@@ -5,7 +5,7 @@ export const navData = [
     isOpened: false,
     subMenu: ['Команда', 'Контакти'],
     links: {
-      Команда: '',
+      Команда: 'team',
       Контакти: '',
     },
   },

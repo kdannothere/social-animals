@@ -6,6 +6,7 @@
 .header__container {
   @include flex.space-between();
   align-items: center;
+  margin-bottom: 45px;
 }
 
 .logo {

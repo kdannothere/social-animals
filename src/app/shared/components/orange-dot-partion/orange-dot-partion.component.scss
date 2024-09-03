@@ -1,0 +1,14 @@
+.block {
+  position: relative;
+}
+.orange {
+  width: 48px;
+}
+.line {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  &__image {
+    max-width: 297px;
+  }
+}
