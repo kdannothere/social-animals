@@ -3,11 +3,12 @@ import { NgClass } from '@angular/common';
 
 import { DropArrowsIconComponent } from '../drop-arrows-icon/drop-arrows-icon.component';
 import { navData, getLink } from '../config/navData';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [DropArrowsIconComponent, NgClass],
+  imports: [DropArrowsIconComponent, NgClass, RouterModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
@@ -19,7 +20,6 @@ export class HeaderComponent {
   getLink = getLink;
   isUaActive = true;
   isEnActive = false;
-
 
   /*
   @HostListener('document:click', ['$event']) onClick(event: Event): void {
